@@ -1,43 +1,61 @@
 {
-  "hash": "b99f4633",
-  "configHash": "54d65daa",
-  "lockfileHash": "b738d485",
-  "browserHash": "8b3522cb",
+  "hash": "918dfa9a",
+  "configHash": "790ee1fe",
+  "lockfileHash": "45408374",
+  "browserHash": "c6032c82",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "e3a2ea49",
+      "fileHash": "df19205b",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "4d1744f8",
+      "fileHash": "bf78ae82",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "23a7b4e9",
+      "fileHash": "96620de2",
+      "needsInterop": false
+    },
+    "@angular/platform-browser/animations/async": {
+      "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/animations/async.mjs",
+      "file": "@angular_platform-browser_animations_async.js",
+      "fileHash": "3b1121dc",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "f0c1222e",
+      "fileHash": "93e4602e",
+      "needsInterop": false
+    },
+    "chart.js": {
+      "src": "../../../../../../node_modules/chart.js/dist/chart.js",
+      "file": "chart__js.js",
+      "fileHash": "54985239",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-FEU5HJHR": {
-      "file": "chunk-FEU5HJHR.js"
+    "chunk-PDRKVAOH": {
+      "file": "chunk-PDRKVAOH.js"
     },
-    "chunk-3CTMZKBG": {
-      "file": "chunk-3CTMZKBG.js"
+    "browser-V7I6GOPM": {
+      "file": "browser-V7I6GOPM.js"
     },
-    "chunk-MBENSOCI": {
-      "file": "chunk-MBENSOCI.js"
+    "chunk-IMENVMIE": {
+      "file": "chunk-IMENVMIE.js"
+    },
+    "chunk-PHFBGYCZ": {
+      "file": "chunk-PHFBGYCZ.js"
+    },
+    "chunk-WDMUDEB6": {
+      "file": "chunk-WDMUDEB6.js"
     }
   }
 }

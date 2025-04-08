@@ -1,52 +1,70 @@
 {
-  "hash": "a2de1dd9",
-  "configHash": "a5b88fb0",
-  "lockfileHash": "b738d485",
-  "browserHash": "2979af03",
+  "hash": "d83250b3",
+  "configHash": "13ddb0d0",
+  "lockfileHash": "45408374",
+  "browserHash": "7ddce285",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "cfbb3d03",
+      "fileHash": "32bc7bce",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "13de3daf",
+      "fileHash": "480a5358",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "dbfee8ed",
+      "fileHash": "e7507fe4",
+      "needsInterop": false
+    },
+    "@angular/platform-browser/animations/async": {
+      "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/animations/async.mjs",
+      "file": "@angular_platform-browser_animations_async.js",
+      "fileHash": "dc276069",
       "needsInterop": false
     },
     "@angular/platform-server": {
       "src": "../../../../../../node_modules/@angular/platform-server/fesm2022/platform-server.mjs",
       "file": "@angular_platform-server.js",
-      "fileHash": "334f1f0e",
+      "fileHash": "714c8082",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "a3e46b4f",
+      "fileHash": "86806861",
+      "needsInterop": false
+    },
+    "chart.js": {
+      "src": "../../../../../../node_modules/chart.js/dist/chart.js",
+      "file": "chart__js.js",
+      "fileHash": "ca31230e",
       "needsInterop": false
     }
   },
   "chunks": {
+    "xhr2-ISERFGGE": {
+      "file": "xhr2-ISERFGGE.js"
+    },
     "chunk-O2K6NUWL": {
       "file": "chunk-O2K6NUWL.js"
+    },
+    "browser-DSDV3UTL": {
+      "file": "browser-DSDV3UTL.js"
+    },
+    "chunk-ENFB5OVQ": {
+      "file": "chunk-ENFB5OVQ.js"
     },
     "chunk-D3JV2RY4": {
       "file": "chunk-D3JV2RY4.js"
     },
     "chunk-NCYSEW5N": {
       "file": "chunk-NCYSEW5N.js"
-    },
-    "xhr2-ISERFGGE": {
-      "file": "xhr2-ISERFGGE.js"
     },
     "chunk-NQ4HTGF6": {
       "file": "chunk-NQ4HTGF6.js"
