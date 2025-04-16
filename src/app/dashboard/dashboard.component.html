@@ -1,11 +1,99 @@
-<div class="dashboard">
-    <div class="chart">
-      <!-- Implement a chart using a charting library like Chart.js or ngx-charts -->
-      <canvas id="vendor-chart"></canvas>
+<!-- <app-sidebar></app-sidebar> -->
+<main>
+  <div class="dashboard">
+    <div class="card">
+      <h4>Vendor breakdown</h4>
+      <p>Keep track of vendors and their security ratings.</p>
+      <app-lazy-highchart [chartOptions]="chartOptions"></app-lazy-highchart>
     </div>
-    <div class="statistics">
-      <h3>Vendors managed: 240</h3>
-      <p>Your weekly goal: 10% above target</p>
+    <div class="card" style="max-width: 200px;">
+      <h4>Vendors monitored</h4>
+      <div class="progress-ring">240</div>
+      <p style="margin-top: 12px; font-size: 12px; text-align: center;">
+        You’ve used 80% of available spots.<br>
+        <strong style="color: #10b981;">+10%</strong>
+      </p>
     </div>
   </div>
-  
+
+  <!-- Team Members Section -->
+  <div class="container">
+    <div class="title">Team members</div>
+
+    <!-- Loading Spinner -->
+    <div *ngIf="loading" class="spinner">Loading...</div>
+
+    <!-- Data Table -->
+    <table *ngIf="!loading">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Status</th>
+          <th>Role</th>
+          <th>Email address</th>
+          <th>Teams</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let member of teamMembers">
+          <td>
+            <div class="user-info">
+              <img [src]="member.avatar" alt="{{member.name}}" />
+              <div>
+                <div class="name">{{member.name?.first_name || member.name}}</div>
+                <div class="username">{{member.name?.handle}}</div>
+              </div>
+            </div>
+          </td>
+          <td><span class="status customer">{{member.status}}</span></td>
+          <td class="role">{{member.role}}</td>
+          <td>
+            <div class="progress-container">
+              <div class="progress-bar">
+                <div class="progress" [style.width.%]="member.progress"></div>
+              </div>
+              <span>{{member.progress}}%</span>
+            </div>
+          </td>
+          <td class="teams">
+            <span *ngFor="let team of member.teams"
+                  [ngStyle]="{
+                    'background-color': team.background_color,
+                    'color': team.text_color,
+                    'padding': '6px 12px',
+                    'border-radius': '20px',
+                    'font-size': '12px',
+                    'margin-right': '6px',
+                    'display': 'inline-block'
+                  }">
+              {{ team.value }}
+            </span>
+          </td>
+          <td class="actions">
+            <button (click)="editMember(member)">✎</button>
+            <button (click)="confirmDelete(member)">🗑️</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Pagination -->
+    <div class="pagination">
+      <button (click)="prevPage()" [disabled]="currentPage === 1">&larr; Previous</button>
+      <div class="pages">
+        <span *ngFor="let page of totalPagesArray" class="page-number" [class.active]="currentPage === page" (click)="goToPage(page)">{{ page }}</span>
+      </div>
+      <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next &rarr;</button>
+    </div>
+  </div>
+
+  <!-- Delete Confirmation Modal -->
+  <div *ngIf="showConfirm" class="modal-backdrop">
+    <div class="modal">
+      <p>Are you sure you want to delete <strong>{{selectedMember?.name.first || selectedMember?.name}}</strong>?</p>
+      <button (click)="deleteMember()">Yes</button>
+      <button (click)="cancelDelete()">No</button>
+    </div>
+  </div>
+</main>

@@ -1,3 +1,7 @@
-<app-header></app-header>
-<app-dashboard></app-dashboard>
-<app-team-member></app-team-member>
+<div class="layout">
+    <app-sidebar></app-sidebar>
+    <main class="main-content">
+      <router-outlet></router-outlet> <!-- or <app-dashboard> directly if not routed -->
+    </main>
+  </div>
+  
